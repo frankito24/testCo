@@ -4,7 +4,7 @@
 
 	
 
-@include('slider')
+
 
 <script type="text/javascript">
 
@@ -149,22 +149,7 @@ $(function(){
 							</div>
 						</div>
 
-						<br><br><br><br>
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;">
-								    <!-- Slides Container -->
-								    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 300px;">
-								       
-								        @foreach ($pictures as $pic)
-											<div>
-												<img u="image" src="{{asset($pic->photo)}}" />
-											</div>    
-										@endforeach
-								    </div>
-								</div>
-							</div>
-						</fieldset>
+						
 
 						
 					{{Form::close()}}

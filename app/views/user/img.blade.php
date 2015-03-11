@@ -1,5 +1,7 @@
 @extends('app')
 
+@include('slider')
+
 @section('content')
 
 
@@ -7,7 +9,7 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
-				<div class="panel-heading">Eliminar Imagen</div>
+				<div class="panel-heading">Album de Foto</div>
 				<div class="panel-body">
 					@if (count($errors) > 0)
 						<div class="alert alert-danger">
@@ -66,14 +68,19 @@
 						</fieldset>
 
 						
-
+						@if($pictures->count()>0)
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
 								<button type="submit" class="btn btn-primary">
-									Submit
+									Eliminar Foto
 								</button>
 							</div>
 						</div>
+						@else
+						<div class="alert alert-danger">
+							<strong>Whoops!</strong> Don't exist photo in this album.<br><br>
+						</div>
+						@endif
 
 						<br><br><br><br>
 						<div class="form-group">
@@ -82,7 +89,11 @@
 								    <!-- Slides Container -->
 								    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 300px;">
 								       
-								       
+								        @foreach ($pictures as $pic)
+											<div>
+												<img u="image" src="{{asset($pic->photo)}}" />
+											</div>    
+										@endforeach
 								    </div>
 								</div>
 							</div>

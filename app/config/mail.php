@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'frank.ingsistema@gmail.com', 'name' => 'Frank'),
+	'from' => array('address' => 'test.colombia1@gmail.com', 'name' => 'Frank'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'frank.ingsistema@gmail.com',
+	'username' => 'test.colombia1@gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'frank210190',
+	'password' => 'testco123',
 
 	/*
 	|--------------------------------------------------------------------------

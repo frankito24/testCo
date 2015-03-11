@@ -38,7 +38,7 @@
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="{{URL::to('/')}}">Home</a></li>
+					
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -47,13 +47,17 @@
 						<li><a href="{{URL::to('/register')}}">Register</a></li>
 					@else
 						<li>
-							<a>{{ Auth::user()->name }}</a>
+							<a>{{ Auth::user()->email }}</a>
+						</li>
+						<li>
+							<a href="{{URL::to('/deleteImage')}}">Album de Foto</a>
+						</li>
+						<li>
+							<a href="{{URL::to('/')}}">Editar Datos</a>
 						</li>
 						<li>
 							<a href="{{URL::to('/logout')}}">Logout</a>
-							
 						</li>
-							<li><a href="{{URL::to('/deleteImage')}}">Eliminar Imagen</a></li>
 					@endif
 				</ul>
 			</div>
@@ -62,8 +66,5 @@
 
 	@yield('content')
 
-<!--	 Scripts 
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
---></body>
+</body>
 </html>
